@@ -1,9 +1,10 @@
 import "normalize.css";
 import styles from "./index.css";
+import $ from "jquery";
 
 function component() {
   const element = document.createElement("div");
-  element.innerHTML = "Hello Webpack";
+  element.innerHTML = "Hello Webpack5";
 
   console.log(styles);
 
@@ -13,3 +14,5 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+// console.log(${`.${styles.helloWebpack}`}.length);
