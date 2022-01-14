@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "dev": "NODE_ENV=development webpack --config webpack.dev.js",
+    "build": "NODE_ENV=production webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "jquery": "^3.6.0",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "win-node-env": "^0.6.0"
   }
 }

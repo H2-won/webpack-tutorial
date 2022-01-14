@@ -2,6 +2,9 @@ const path = require("path");
 const HhtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require("webpack");
+
+const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = {
   entry: "./index.js",
@@ -47,12 +50,17 @@ module.exports = {
       meta: {
         viewport: "width=device-width, initial-scale=1",
       },
-      minify: {
-        collapseWhitespace: true,
-        useShortDoctype: true,
-        removeScriptTypeAttributes: true,
-      },
+      minify: isProduction
+        ? {
+            collapseWhitespace: true,
+            useShortDoctype: true,
+            removeScriptTypeAttributes: true,
+          }
+        : false,
     }),
     new CleanWebpackPlugin(),
+    new webpack.DefinePlugin({
+      IS_PRODUCTION: true,
+    }),
   ],
 };
