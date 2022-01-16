@@ -5,7 +5,6 @@ const config = {
   mode: "development",
   devServer: {
     open: true,
-    overlay: true,
     historyApiFallback: {
       rewrites: [
         { from: /^\/subpage$/, to: "subpage.html" },
