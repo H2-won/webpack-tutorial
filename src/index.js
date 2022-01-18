@@ -1,5 +1,5 @@
 import "normalize.css";
-import styles from "./index.css";
+import styles from "./index.module.scss";
 import $ from "jquery";
 import huiIcon from "./images/huiIcon.png";
 import huiIconSvg from "./images/huiIcon.svg";
@@ -10,6 +10,7 @@ function component() {
 
   const imgElement = document.createElement("img");
   imgElement.src = huiIcon;
+  imgElement.classList = styles.huiIcon;
 
   const svgElement = document.createElement("img");
   svgElement.src = huiIconSvg;

@@ -1,0 +1,23 @@
+$bg-color: #242424;
+$font-color: lightgreen;
+
+body {
+  background-color: $bg-color;
+  text-align: center;
+}
+
+.helloWebpack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 2rem;
+  color: $font-color;
+}
+
+.huiIcon {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  margin-top: -80px;
+}
