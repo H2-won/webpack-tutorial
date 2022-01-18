@@ -14,6 +14,7 @@ function component() {
 
   const svgElement = document.createElement("img");
   svgElement.src = huiIconSvg;
+  svgElement.classList = styles.huiIcon;
 
   console.log(huiIcon);
   console.log(huiIconSvg);
