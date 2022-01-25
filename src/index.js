@@ -3,6 +3,7 @@ import styles from "./index.module.scss";
 import $ from "jquery";
 import huiIcon from "./images/huiIcon.png";
 import huiIconSvg from "./images/huiIcon.svg";
+import "@babel/polyfill";
 
 function component() {
   const element = document.createElement("div");
